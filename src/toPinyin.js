@@ -6,8 +6,17 @@ import MUTIL_PINYIN_TABLE from "./dictionary/mutil_pinyin.dict"; // 词组字典
 import chineseDict from "./dictionary/traditional_chinese.dict"; // 繁体字典
 
 const CHINESE_LING = '〇';
+const CHINESE_REGEX = /[\u4e00-\u9fa5]/g;
 
-export default class PinyinHelper {
+export default class ToPinyin {
+
+    static chineseToPinyin(str) {
+        if (typeof str !== 'string') throw new TypeError('参数错误');
+        if (!CHINESE_REGEX.test(str)) return str; // 无汉字返回str
+
+        str = this._traditionalToSimplified(str); // 繁转简
+    }
+
     /**
      * 获取给定字符串是否在字典中找到词组拼音对应关系
      * 
@@ -28,9 +37,9 @@ export default class PinyinHelper {
      * 判断一个汉字是否为多音字
      * @param {string/char} c 
      */
-    static isMultiPinyin(c) {
+    static _isMultiPinyin(c) {
         const pinyinArr = PINYIN_TABLE[c];
-        if (typeof (c) != 'undefined') {
+        if (!!pinyinArr) {
             return pinyinArr.length > 1
         }
         return false;
@@ -41,12 +50,7 @@ export default class PinyinHelper {
      * @param {*} str 需要验证和转换的字符串
      * @returns 完成转换的字符串
      */
-    static traditionalToSimplified(str) {
-        const CHINESE_REGEX = /[\u4e00-\u9fa5]/g;
-
-        if (typeof str !== 'string') throw new TypeError('参数错误');
-        if (!CHINESE_REGEX.test(str)) return str; // 无汉字返回str
-
+    static _traditionalToSimplified(str) {
         let chineseArr = str.match(CHINESE_REGEX);
 
         chineseArr = chineseArr.filter(val => { // 过滤繁体字

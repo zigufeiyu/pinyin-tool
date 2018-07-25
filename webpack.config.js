@@ -4,7 +4,7 @@ module.exports = {
     mode: 'production',
     target: 'node',
     entry: {
-        index: './index.js'
+        index: './src/index.js'
     },
     output: {
         path: path.resolve(__dirname, "dist"),
