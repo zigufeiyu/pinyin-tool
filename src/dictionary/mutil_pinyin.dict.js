@@ -724,7 +724,6 @@ const mutil_pinyin_dict = {
     "作为":"zuowei",
     "成为":"chengwei",
     "为难":"weinan",
-    "轧钢":"zhagang",
     "咽喉":"yanhou",
     "呜咽":"wuye",
     "哽咽":"gengye",
@@ -820,7 +819,6 @@ const mutil_pinyin_dict = {
     "重申":"chongshen",
     "重阳":"chongyang",
     "重逢":"chongfeng",
-    "重沓":"chongta",
     "重叠":"chongdie",
     "重霄":"chongxiao",
     "重唱":"chongchang",
@@ -844,4 +842,4 @@ const mutil_pinyin_dict = {
     "葵涌":"kuichong"
 }
 
-export default mutil_pinyin_dict;
+module.exports = mutil_pinyin_dict;

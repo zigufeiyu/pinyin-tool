@@ -20904,4 +20904,4 @@ const pinyin_dict = {
     "龥": ["yue"]
 }
 
-export default pinyin_dict;
+module.exports = pinyin_dict;
