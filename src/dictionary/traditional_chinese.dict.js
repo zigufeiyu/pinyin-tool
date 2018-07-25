@@ -1,4 +1,4 @@
-export var chinese_dict = {
+const chinese_dict = {
     "臺":"台",
     "萬":"万",
     "與":"与",
@@ -2543,3 +2543,5 @@ export var chinese_dict = {
     "龕":"龛",
     "龜":"龟"
 }
+
+export default chinese_dict;

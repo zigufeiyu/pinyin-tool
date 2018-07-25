@@ -1,4 +1,3 @@
-import fs from 'fs'
-const mkdir = fs.mkdir
+import toSimplified from "./src/toSimplified";
 
-export default mkdir
+console.log(toSimplified("xiaoma小馬小馬"))
