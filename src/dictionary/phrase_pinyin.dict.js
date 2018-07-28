@@ -1,4 +1,4 @@
-const mutil_pinyin_dict = {
+const phrase_pinyin_dict = {
     "阿訇":"ahong",
     "阿罗汉":"aluohan",
     "阿木林":"amulin",
@@ -842,4 +842,4 @@ const mutil_pinyin_dict = {
     "葵涌":"kuichong"
 }
 
-module.exports = mutil_pinyin_dict;
+module.exports = phrase_pinyin_dict;

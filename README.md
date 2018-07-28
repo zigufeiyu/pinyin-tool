@@ -1,16 +1,26 @@
 ## 汉字转无声调拼音
 
-> 字典  
+> 内置字典  
 
 * 繁简字体对照字典
-* 单字拼音对照字典
-* 多音词语对照字典
+  * 包含2531个繁体字
+* 简体字拼音对照字典
+  * 包含18372个简体字读音
+* 多音字词语对照字典
+  * 包含841个常用多音字词语读音
 
-> 流程
+> 使用说明
+
+* 安装
+```js
+  npm install --save pinyin-tool
+```
+
+* 使用
+
+```js
+  const ToPinyin = require('pinyin-tool')
+
+  const userResult = ToPinyin.chineseToPinyin('userString')
+```
  
-* 判断是否字符串
-* 判断是否有汉字
-* 繁体字转换简体
-* 判断包含多音字
-* 先转换词组拼音
-* 汉字替换为拼音
