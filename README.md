@@ -1,4 +1,7 @@
-## 汉字转无声调拼音
+## pinyin-tool
+![passing](https://travis-ci.org/maqing01/pinyin-tool.svg?branch=master)
+
+### 汉字转无声调拼音
 
 > 内置字典  
 
