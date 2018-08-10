@@ -15,6 +15,7 @@ describe('chineseToPinyin', () => {
     })
     test('simplified to pinyin', () => {
         expect(ToPinyin.chineseToPinyin('走路去重庆积重难返')).toBe('zouluquchongqingjizhongnanfan')
+        expect(ToPinyin.chineseToPinyin('恶人很可恶')).toBe('erenhenkewu')
     })
     test('traditional to pinyin', () => {
         expect(ToPinyin.chineseToPinyin('萬戶')).toBe('wanhu')

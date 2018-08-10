@@ -7,7 +7,7 @@ uglifyjs ()
         if [ -d "$path" ];then
             uglifyjs "$path"
         elif [ -f "$path" ];then
-            ./node_modules/_uglify-js@3.4.5@uglify-js/bin/uglifyjs "$path" -m -o "$path"
+            ./node_modules/.bin/uglifyjs "$path" -m -o "$path"
         fi
     done
 }
