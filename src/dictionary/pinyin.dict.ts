@@ -1,5 +1,7 @@
-"use strict";
-var pinyin_dict = {
+interface Dict {
+    [propName: string]: string[];
+}
+const pinyin_dict: Dict = {
     "〇": ["ling"],
     "一": ["yi"],
     "丁": ["ding", "zheng"],
@@ -18372,5 +18374,6 @@ var pinyin_dict = {
     "龣": ["jiao"],
     "龤": ["xie"],
     "龥": ["yue"]
-};
-module.exports = pinyin_dict;
+}
+
+export = pinyin_dict;

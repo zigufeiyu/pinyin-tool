@@ -1,5 +1,7 @@
-"use strict";
-var chinese_dict = {
+interface Dict {
+    [propName: string]: string;
+}
+const chinese_dict: Dict = {
     "臺": "台",
     "萬": "万",
     "與": "与",
@@ -2531,5 +2533,6 @@ var chinese_dict = {
     "龔": "龚",
     "龕": "龛",
     "龜": "龟"
-};
-module.exports = chinese_dict;
+}
+
+export = chinese_dict;

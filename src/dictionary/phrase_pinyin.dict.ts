@@ -1,5 +1,7 @@
-"use strict";
-var phrase_pinyin_dict = {
+interface Dict {
+    [propName: string]: string;
+}
+const phrase_pinyin_dict: Dict = {
     "阿訇": "ahong",
     "阿罗汉": "aluohan",
     "阿木林": "amulin",
@@ -843,5 +845,6 @@ var phrase_pinyin_dict = {
     "东西涌": "dongxichong",
     "霞涌": "xiachong",
     "葵涌": "kuichong"
-};
-module.exports = phrase_pinyin_dict;
+}
+
+export = phrase_pinyin_dict;

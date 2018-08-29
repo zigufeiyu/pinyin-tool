@@ -6,7 +6,7 @@ uglifyjs ()
     do
         if [ -d "$path" ];then
             uglifyjs "$path"
-        elif [ -f "$path" ];then
+        elif [ -f "$path" ] && [[ "$path" =~ ".js" ]];then
             ./node_modules/.bin/uglifyjs "$path" -m -o "$path"
         fi
     done

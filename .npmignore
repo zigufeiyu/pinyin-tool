@@ -1,3 +1,6 @@
 src
 tool
+__test__
 node_modules
+.gitignore
+.travis.yml
